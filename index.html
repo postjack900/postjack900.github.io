@@ -1,0 +1,143 @@
+<script>
+function login()
+{
+
+  //Get the username, stored in strUser
+  var e = document.getElementById("username");
+  var strUser = e.options[e.selectedIndex].text;
+
+  //Get the users password
+  var strPassword = document.getElementById('mypassword').value;
+
+  if (strUser === 'Meghann')
+  {
+    //See if the password is correct
+    if (document.getElementById('mypassword').value !== '1980')
+    {
+      alert('Invalid');
+    }
+    else //correct password
+    {
+      //Alert hi and redirect
+      alert('Welcome '+strUser);
+      window.open('https://www.greetingsisland.com/ecard/pc2nw1ctsj1z/en','_self'); // _self _blank
+    }
+  }
+  else if (strUser === 'Burgler')
+  {
+    //See if the password is correct
+    if (document.getElementById('mypassword').value !== 'redpandas')
+    {
+      alert('Invalid');
+    }
+    else //correct password
+    {
+      //Alert hi and redirect
+      alert('Welcome '+strUser);
+      window.open('https://theuselessweb.com','_self'); // _self _blank
+    }
+  }
+}
+</script>
+
+<div id = 'title'>
+<h1 id = 'title_text'>Secret Birthdays INC.</h1>
+</div>
+
+<div id = 'code'>
+<center>
+<form action="#" onsubmit="login();return false">
+<div id="orderForm">
+
+    <table id="orderFormTable" width="100%" border="0" align="center">
+	<tr>
+		<td align="right">What's your name?</td>
+		<td align="left">
+			<select id="username">
+				<option value="" select="selected">Select Name</option>
+				<option value="Meghann">Meghann</option>
+				<option value="Burgler">Burgler</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td align="right">What's the password?</td>
+		<td align="left"><input type="text" id="mypassword" size="10" /></td>
+	</tr>
+
+	<tr align="center">
+		<td colspan="2"><button type="button" id="Login" onclick="login();return false" >Open Card</button></td>
+	</tr>
+
+</div>
+</center>
+</form>
+</div>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+}
+
+#orderFormTable {
+	font-size: 2.0em;
+	background-color: #e4e8e3;
+    border: 10px solid teal;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+	width: 100%;
+  height: 1000px;
+}
+
+
+#orderFormTable td{
+	padding: 10px;
+	width: 35%;
+  color: #fefff0;
+}
+
+#code {
+	background-color: #4c4d46;
+	border: 10px solid #4c4d46;
+	border-radius: 10px;
+  height: 150px;
+	margin-right: 35%;
+  margin-left: 35%;
+  margin-top: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+  min-width: 500px;
+  align: center;
+	text-align: center;
+}
+
+#title {
+	background-color: #4c4d46;
+  border: 1px solid #4c4d46;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+  height: 65;
+}
+
+#title_text {
+  position: relative;
+  bottom: 12;
+  color: #fefff0;
+}
+
+select, input, button {
+    font: inherit;
+}
+
+body {
+    background-position: center;
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+</style>
